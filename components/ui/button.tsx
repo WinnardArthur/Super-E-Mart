@@ -8,11 +8,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, disabled, type = "button", ...props }, ref) => {
     return (
       <button
+      className={cn(
+        `w-auto bg-black rounded-full border-transparent px-5 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold hover:opacity-75 transition`,
+        className
+      )}
         ref={ref}
-        className={cn(
-          `w-auto bg-black rounded-full border-transparent px-5 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold hover:opacity-75 transition`,
-          className
-        )}
+        {...props}
       >
         {children}
       </button>
