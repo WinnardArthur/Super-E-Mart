@@ -35,5 +35,5 @@ export type Color = {
 
 export type Image = {
   id: string;
-  url: Image;
+  url: string;
 };
